@@ -6,14 +6,14 @@ pygame.init()
 display_width = 800
 display_height = 600
 
-black = (0, 0, 0)
-white = (255, 255, 255)
+black = (0, 0, 0)  # score
+white = (255, 255, 255) # background
+# kbkkhb
+red = (200, 0, 0)  # button
+green = (0, 200, 0) # button 
 
-red = (200, 0, 0)
-green = (0, 200, 0)
-
-bright_red = (255, 0, 0)
-bright_green = (0, 255, 0)
+bright_red = (255, 0, 0) # hovering
+bright_green = (0, 255, 0) # hovering
 
 block_color = (53, 115, 255)
 
@@ -89,7 +89,7 @@ def game_intro():
         pygame.display.update()
         clock.tick(15)
 
-
+# addind one more button shoping 
 def shop():
     while shop:
         for event in pygame.event.get():
@@ -102,7 +102,7 @@ def shop():
         TextSurf, TextRect = text_objects("Shop", text)
         TextRect.center = ((display_width / 2), 50)
         gameDisplay.blit(TextSurf, TextRect)
-
+# loading 3 more pictures to have possibiliti to choose car
         car11 = pygame.image.load('car1.png')
         car1 = pygame.transform.scale(car11, (100, 100))
         gameDisplay.blit(car1, (200, 250))
@@ -119,7 +119,7 @@ def shop():
         button("Quit", 550, 450, 100, 50, red, bright_red, quitgame)
         pygame.display.update()
         clock.tick(15)
-
+# if you want to paus game press (p)
 
 def paused():
     largeText = pygame.font.SysFont("comicsansms", 115)
@@ -170,7 +170,7 @@ def crash():
         pygame.display.update()
         clock.tick(15)
 
-
+# size
 def car_1():
     x = (display_width * 0.45)
     y = (display_height * 0.8)
